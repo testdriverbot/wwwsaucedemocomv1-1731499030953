@@ -1,0 +1,9 @@
+version: 4.1.15
+steps:
+  - prompt: Scroll to the bottom of the webpage.
+    commands:
+      - command: scroll
+        direction: down
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
