@@ -1,0 +1,34 @@
+version: 4.1.15
+steps:
+  - prompt: Focus the login form.
+    commands:
+      - command: hover-text
+        text: Username
+        description: username input field
+        action: click
+  - prompt: Enter the test username and password.
+    commands:
+      - command: hover-text
+        text: Username
+        description: username input field
+        action: click
+      - command: type
+        text: standard_user
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: secret_sauce
+  - prompt: Click the "LOGIN" button.
+    commands:
+      - command: hover-text
+        text: LOGIN
+        description: login button
+        action: click
+  - prompt: >-
+      Assert that the user is redirected to the products page.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the page displays "Products"
