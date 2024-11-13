@@ -1,0 +1,14 @@
+version: 4.1.15
+steps:
+  - prompt: Open the webpage in the browser.
+    commands:
+      - command: hover-text
+        text: saucedemo.com/v1/
+        description: URL in the address bar
+        action: click
+  - prompt: >-
+      Assert that the Swag Labs logo is visible.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the Swag Labs logo is visible
